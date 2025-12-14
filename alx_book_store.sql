@@ -1,4 +1,6 @@
-CREATE DATABASE IF NOT EXISTS alx_book_store USE alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+
+USE alx_book_store;
 
 CREATE TABLE IF NOT EXISTS Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,7 +26,7 @@ CREATE TABLE IF NOT EXISTS Customers (
 CREATE TABLE IF NOT EXISTS Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
-    CONSTRAINT fk_customer_order FOREIGN KEY (customer_id) REFERENCES Customers (customer_id),
+    FOREIGN KEY (customer_id) REFERENCES Customers (customer_id),
     order_date DATE DEFAULT(CURRENT_DATE)
 )
 
