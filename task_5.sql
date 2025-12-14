@@ -1,8 +1,7 @@
 USE alx_book_store;
 
--- task_5.sql
 INSERT INTO
-    Customers (
+    customer (
         customer_id,
         customer_name,
         email,
